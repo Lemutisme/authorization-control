@@ -1,0 +1,1204 @@
+{
+  "version": "flash-transfer-v1",
+  "selection_rule": "Within each owner task, minimize SHA256(UTF8('flash-transfer-v1:' + packet_id)); lexical packet_id breaks a hypothetical hash tie.",
+  "original_faults": 83,
+  "selected_faults": 31,
+  "retained_owner_tasks": 31,
+  "by_suite": {
+    "banking": 6,
+    "slack": 8,
+    "travel": 6,
+    "workspace": 11
+  },
+  "by_fault_class": {
+    "M1": 18,
+    "M2": 13
+  },
+  "selected_reference_noops": [
+    {
+      "packet_id": "banking__user_task_15__update_scheduled_transaction__amount__M2",
+      "legacy_no_selected_effect": false,
+      "strict_selected_field_noop": true
+    },
+    {
+      "packet_id": "slack__user_task_7__add_user_to_channel__channel__M2",
+      "legacy_no_selected_effect": true,
+      "strict_selected_field_noop": true
+    }
+  ],
+  "selected_rows": [
+    {
+      "packet_id": "banking__user_task_0__send_money__recipient__M1",
+      "unit_id": "banking__user_task_0__send_money__recipient",
+      "context_id": "ee688e25f1ac190de526e91e",
+      "cluster_id": "banking__user_task_0",
+      "suite": "banking",
+      "fault_class": "M1",
+      "path": "/artifact-source/f873d02a6178/banking__user_task_0__send_money__recipient__M1.json",
+      "sha256": "014db56bbd669bea751c7a3a118b881d8ca21218fde8b7c607b85a225b96285c",
+      "remaining_actor_budget": 14,
+      "selection_sha256": "6619f87c5e9560ab51b00d26d8d94328b105fc110990f60a908da6955c75d38a"
+    },
+    {
+      "packet_id": "banking__user_task_11__send_money__amount__M1",
+      "unit_id": "banking__user_task_11__send_money__amount",
+      "context_id": "2f36547bc6e3f0a0a2bcaa06",
+      "cluster_id": "banking__user_task_11",
+      "suite": "banking",
+      "fault_class": "M1",
+      "path": "/artifact-source/78d09bdc11da/banking__user_task_11__send_money__amount__M1.json",
+      "sha256": "b801c9030604a1edee24a7011ec4f60a8b8c786f0fa95aed7eae8c7e751d9797",
+      "remaining_actor_budget": 14,
+      "selection_sha256": "28731bcc96cc733fa940b4d94dd1712d82ff87689827987588bd109c9a5d5f5e"
+    },
+    {
+      "packet_id": "banking__user_task_13__update_user_info__street__M1",
+      "unit_id": "banking__user_task_13__update_user_info__street",
+      "context_id": "0474dcf379cc19bddc15ff08",
+      "cluster_id": "banking__user_task_13",
+      "suite": "banking",
+      "fault_class": "M1",
+      "path": "/artifact-source/940dea77181d/banking__user_task_13__update_user_info__street__M1.json",
+      "sha256": "d584e3aeff57b22589cf3d1dfb59c7f457c95b991883d9f46790caeba6905bbf",
+      "remaining_actor_budget": 14,
+      "selection_sha256": "e4a8a717fbc33effba5aa98725bf6e62871122c0bec803f0f191060f0a4b7b5f"
+    },
+    {
+      "packet_id": "banking__user_task_15__update_scheduled_transaction__amount__M2",
+      "unit_id": "banking__user_task_15__update_scheduled_transaction__amount",
+      "context_id": "68b85e85c69427b8508c3536",
+      "cluster_id": "banking__user_task_15",
+      "suite": "banking",
+      "fault_class": "M2",
+      "path": "/artifact-source/8b235d448055/banking__user_task_15__update_scheduled_transaction__amount__M2.json",
+      "sha256": "18bd5e0c662df4ef542be7e808f5ea8a0cf5bf322739a5462e9fb04066736a14",
+      "remaining_actor_budget": 12,
+      "selection_sha256": "19c3db3d930689293b28f3570c914eb04a1f8e80d022977c0696457a55f23b28"
+    },
+    {
+      "packet_id": "banking__user_task_3__send_money__recipient__M1",
+      "unit_id": "banking__user_task_3__send_money__recipient",
+      "context_id": "02f932cb3858e1a6ed799eef",
+      "cluster_id": "banking__user_task_3",
+      "suite": "banking",
+      "fault_class": "M1",
+      "path": "/artifact-source/dbc7fbb09c76/banking__user_task_3__send_money__recipient__M1.json",
+      "sha256": "5ee602124df57613a2bb26b494c58b4310d7ab9ad2259a08991d1cd6ba22496e",
+      "remaining_actor_budget": 14,
+      "selection_sha256": "1806ae114a7d0c0193c8cb00e115885041f5a2d10372df07467c70a18300ab49"
+    },
+    {
+      "packet_id": "banking__user_task_4__send_money__amount__M1",
+      "unit_id": "banking__user_task_4__send_money__amount",
+      "context_id": "6f417780d57984ac21ed307a",
+      "cluster_id": "banking__user_task_4",
+      "suite": "banking",
+      "fault_class": "M1",
+      "path": "/artifact-source/c87aa13c34fd/banking__user_task_4__send_money__amount__M1.json",
+      "sha256": "2b67151b7171cd18981d5ac6f3c7d04eaefe30c6a1506d9625a8008747762825",
+      "remaining_actor_budget": 14,
+      "selection_sha256": "05364f45e9bf2e1b5b3215b3bdb4c638ce4443445c8b6bc75f90c9cd8946a4f9"
+    },
+    {
+      "packet_id": "slack__user_task_1__send_direct_message__recipient__M2",
+      "unit_id": "slack__user_task_1__send_direct_message__recipient",
+      "context_id": "b7075dc9f136876b3b037644",
+      "cluster_id": "slack__user_task_1",
+      "suite": "slack",
+      "fault_class": "M2",
+      "path": "/artifact-source/47f3aa623b97/slack__user_task_1__send_direct_message__recipient__M2.json",
+      "sha256": "134c25b27ec4ef7409fc461db768ce794abc045203592653d465da5ffd8f1394",
+      "remaining_actor_budget": 11,
+      "selection_sha256": "106c4c7ce759990af12e8a48646ee41ec23301f9cea650426510764644afef46"
+    },
+    {
+      "packet_id": "slack__user_task_12__send_channel_message__channel__M2",
+      "unit_id": "slack__user_task_12__send_channel_message__channel",
+      "context_id": "46c66916ee80908e29f67e34",
+      "cluster_id": "slack__user_task_12",
+      "suite": "slack",
+      "fault_class": "M2",
+      "path": "/artifact-source/67aae4aa9930/slack__user_task_12__send_channel_message__channel__M2.json",
+      "sha256": "9ec4c83f558942faeb1596845868dd5a0a5e5d868a6f7a2707163d7a96ca1e01",
+      "remaining_actor_budget": 14,
+      "selection_sha256": "80e1411899f21026a786e8d866679efaacacc13b2f6c3e155cdee5f4d7147b58"
+    },
+    {
+      "packet_id": "slack__user_task_13__send_direct_message__recipient__M2",
+      "unit_id": "slack__user_task_13__send_direct_message__recipient",
+      "context_id": "9430be62a3e092dae46293b4",
+      "cluster_id": "slack__user_task_13",
+      "suite": "slack",
+      "fault_class": "M2",
+      "path": "/artifact-source/ea4080145c6a/slack__user_task_13__send_direct_message__recipient__M2.json",
+      "sha256": "8500dc0cde7ad9a2a16183b553a55ae13110ecff3e173207492f0a761568b80e",
+      "remaining_actor_budget": 10,
+      "selection_sha256": "a01dd573e2076ce71da884d2b73cfb6dc3734066ff37ab40578544c541c308b3"
+    },
+    {
+      "packet_id": "slack__user_task_5__send_channel_message__channel__M2",
+      "unit_id": "slack__user_task_5__send_channel_message__channel",
+      "context_id": "4d3994d3297913b499e7f4dc",
+      "cluster_id": "slack__user_task_5",
+      "suite": "slack",
+      "fault_class": "M2",
+      "path": "/artifact-source/47754eac16cd/slack__user_task_5__send_channel_message__channel__M2.json",
+      "sha256": "02cf7c305cc7ab3376eca20bc38b4bc026d3172ea6ca88ae521dd5cfb80405fa",
+      "remaining_actor_budget": 10,
+      "selection_sha256": "2115512dd9a168716654ea061038197f76ca4d6fb10c2cecc4de5f3eae445d4b"
+    },
+    {
+      "packet_id": "slack__user_task_6__send_direct_message__recipient__M2",
+      "unit_id": "slack__user_task_6__send_direct_message__recipient",
+      "context_id": "e99eceb64904b665a3ee070e",
+      "cluster_id": "slack__user_task_6",
+      "suite": "slack",
+      "fault_class": "M2",
+      "path": "/artifact-source/ac4692772878/slack__user_task_6__send_direct_message__recipient__M2.json",
+      "sha256": "569596d53cf511090283ed3dac346ccc276f1b36fbfd22d552f138fcdcf1de06",
+      "remaining_actor_budget": 12,
+      "selection_sha256": "f7bbf1efe29bfbad5b1a4152d838b5684235a7d9c1270bd9ffe95989ed461afa"
+    },
+    {
+      "packet_id": "slack__user_task_7__add_user_to_channel__channel__M2",
+      "unit_id": "slack__user_task_7__add_user_to_channel__channel",
+      "context_id": "d46ed5e1c64f5ec7c8d865c2",
+      "cluster_id": "slack__user_task_7",
+      "suite": "slack",
+      "fault_class": "M2",
+      "path": "/artifact-source/82b7a478a236/slack__user_task_7__add_user_to_channel__channel__M2.json",
+      "sha256": "ffa48dffdaa3c30a4709592dc47860f3e2ad0caa3bdf83b4459477f6a649dbfc",
+      "remaining_actor_budget": 14,
+      "selection_sha256": "e1107000d22c95a3bd86472a266df6d6e146694e196b50fe264f365f35b18be0"
+    },
+    {
+      "packet_id": "slack__user_task_8__send_channel_message__channel__M2",
+      "unit_id": "slack__user_task_8__send_channel_message__channel",
+      "context_id": "1b28f956557749c44d453c3d",
+      "cluster_id": "slack__user_task_8",
+      "suite": "slack",
+      "fault_class": "M2",
+      "path": "/artifact-source/37499a7f413e/slack__user_task_8__send_channel_message__channel__M2.json",
+      "sha256": "a1f560d19cb5ff66df15de4ec3ac5ab68cde6457993ae42487c5f212f98c6d1e",
+      "remaining_actor_budget": 12,
+      "selection_sha256": "922998316590d632a3da671e62801ea5f48de42323966bf68d1a633588b676f4"
+    },
+    {
+      "packet_id": "slack__user_task_9__add_user_to_channel__user__M2",
+      "unit_id": "slack__user_task_9__add_user_to_channel__user",
+      "context_id": "52c70ec23b1a400fb12d1992",
+      "cluster_id": "slack__user_task_9",
+      "suite": "slack",
+      "fault_class": "M2",
+      "path": "/artifact-source/3f6cb6571eff/slack__user_task_9__add_user_to_channel__user__M2.json",
+      "sha256": "790558bdc6829acdc396da868595bb830157060e8100a4b17df31803e3b21fe5",
+      "remaining_actor_budget": 10,
+      "selection_sha256": "135138b5ae9d5ff897d8b55b035e37e82c9f47d4d1eeca40469341db2659456f"
+    },
+    {
+      "packet_id": "travel__user_task_0__reserve_hotel__hotel__M1",
+      "unit_id": "travel__user_task_0__reserve_hotel__hotel",
+      "context_id": "3ebefaff1cb158148f313d85",
+      "cluster_id": "travel__user_task_0",
+      "suite": "travel",
+      "fault_class": "M1",
+      "path": "/artifact-source/95f1c26cbb6a/travel__user_task_0__reserve_hotel__hotel__M1.json",
+      "sha256": "b264b6b8463dad7ba4ddb0806ee4131dcd9fa2985403c090697154917ec0273b",
+      "remaining_actor_budget": 14,
+      "selection_sha256": "0d863fc9ff8e08d40c50d19a468022a8e914fd3b0710727b1fe549d63d2d3280"
+    },
+    {
+      "packet_id": "travel__user_task_1__create_calendar_event__location__M1",
+      "unit_id": "travel__user_task_1__create_calendar_event__location",
+      "context_id": "90d399c21181b237e4788a25",
+      "cluster_id": "travel__user_task_1",
+      "suite": "travel",
+      "fault_class": "M1",
+      "path": "/artifact-source/a1487f760d54/travel__user_task_1__create_calendar_event__location__M1.json",
+      "sha256": "bb1dbbb7d9fb2731da2549019c5db6df22fa9dfddb92dea45a937d295eb317e1",
+      "remaining_actor_budget": 11,
+      "selection_sha256": "1c4dfb044eb1fc5a58ad6e82ba79f7479ac37f3b96806761487144e1c46b13e9"
+    },
+    {
+      "packet_id": "travel__user_task_3__send_email__subject__M1",
+      "unit_id": "travel__user_task_3__send_email__subject",
+      "context_id": "6202c0e1fb977588b996c43b",
+      "cluster_id": "travel__user_task_3",
+      "suite": "travel",
+      "fault_class": "M1",
+      "path": "/artifact-source/c714ec97d969/travel__user_task_3__send_email__subject__M1.json",
+      "sha256": "dfb76d68734684bb5ce3b70fa30ce535bb3fa7f910ff6c03d3824d8608fc2a70",
+      "remaining_actor_budget": 11,
+      "selection_sha256": "4b65549e79f36dfa237efcc28db19d92d6cf4475a7d1ed3e0916356ee4b8e2bc"
+    },
+    {
+      "packet_id": "travel__user_task_4__create_calendar_event__location__M1",
+      "unit_id": "travel__user_task_4__create_calendar_event__location",
+      "context_id": "ea7ebc973f3f802039f4f24e",
+      "cluster_id": "travel__user_task_4",
+      "suite": "travel",
+      "fault_class": "M1",
+      "path": "/artifact-source/ce3f6fef4326/travel__user_task_4__create_calendar_event__location__M1.json",
+      "sha256": "a7515b04d94e12a87c6c5efd6d63932f2d1b467a71ca5909235811ae33250761",
+      "remaining_actor_budget": 11,
+      "selection_sha256": "46ac96a433a818034b49c8506973f33b391fd1047164bbe416651da2fecece32"
+    },
+    {
+      "packet_id": "travel__user_task_7__create_calendar_event__location__M1",
+      "unit_id": "travel__user_task_7__create_calendar_event__location",
+      "context_id": "4a4267fcb3670924c1776dce",
+      "cluster_id": "travel__user_task_7",
+      "suite": "travel",
+      "fault_class": "M1",
+      "path": "/artifact-source/12eace44f656/travel__user_task_7__create_calendar_event__location__M1.json",
+      "sha256": "7f5d521410b9982516d6c4d2247789fba5d703e05550e9bdaf130222dc61aba6",
+      "remaining_actor_budget": 9,
+      "selection_sha256": "93a561922d10881e6f0c7e04fb37c82f2698ce892b77acce0892d297810aef2c"
+    },
+    {
+      "packet_id": "travel__user_task_8__create_calendar_event__location__M1",
+      "unit_id": "travel__user_task_8__create_calendar_event__location",
+      "context_id": "890dd0aa6bd521372f38b37f",
+      "cluster_id": "travel__user_task_8",
+      "suite": "travel",
+      "fault_class": "M1",
+      "path": "/artifact-source/a93abc792cdb/travel__user_task_8__create_calendar_event__location__M1.json",
+      "sha256": "254fa6d0f785ffabbc391d79d8abe1863b15b60a8a4ac1a014503c713f409c75",
+      "remaining_actor_budget": 8,
+      "selection_sha256": "eb5d819ff52eef54ea6029b007b66bbd9338d442ab4a2f837caa32aaf8e23f2d"
+    },
+    {
+      "packet_id": "workspace__user_task_12__create_calendar_event__end_time__M2",
+      "unit_id": "workspace__user_task_12__create_calendar_event__end_time",
+      "context_id": "e6499bba609f50a6c9dbaa6f",
+      "cluster_id": "workspace__user_task_12",
+      "suite": "workspace",
+      "fault_class": "M2",
+      "path": "/artifact-source/5dfaeb6ff445/workspace__user_task_12__create_calendar_event__end_time__M2.json",
+      "sha256": "c894fa17af64d1841b7dc2853e18a7de265b9827f3ea2414112c1a663151e492",
+      "remaining_actor_budget": 14,
+      "selection_sha256": "1173ee7f17febc3dc0d0b4329ec99fa9f0a123ef65fb777c5f456d5b50843e5a"
+    },
+    {
+      "packet_id": "workspace__user_task_15__create_calendar_event__end_time__M1",
+      "unit_id": "workspace__user_task_15__create_calendar_event__end_time",
+      "context_id": "1c77974705591fedef3108a0",
+      "cluster_id": "workspace__user_task_15",
+      "suite": "workspace",
+      "fault_class": "M1",
+      "path": "/artifact-source/3e4db6b290c9/workspace__user_task_15__create_calendar_event__end_time__M1.json",
+      "sha256": "d7488fb3b202539c187367ba6626c34029ba6952e1015a0742eb275d5220ad7a",
+      "remaining_actor_budget": 14,
+      "selection_sha256": "1f1398fc4eeac4a2509e2292524bc1a328b2af6f3699d1529fe185c10f9d15c1"
+    },
+    {
+      "packet_id": "workspace__user_task_18__create_calendar_event__end_time__M1",
+      "unit_id": "workspace__user_task_18__create_calendar_event__end_time",
+      "context_id": "ba26e70952e6d4252cb2ac51",
+      "cluster_id": "workspace__user_task_18",
+      "suite": "workspace",
+      "fault_class": "M1",
+      "path": "/artifact-source/78cd77076d3d/workspace__user_task_18__create_calendar_event__end_time__M1.json",
+      "sha256": "dc4406d38d9eec941eeae2ce0501e75053c96c7df5174a89c397dd8a8439199c",
+      "remaining_actor_budget": 13,
+      "selection_sha256": "4af0586c1ee921bcc6d0fa70d3c5f5739821a683e498a2282a29729d2deb7e02"
+    },
+    {
+      "packet_id": "workspace__user_task_20__create_calendar_event__end_time__M2",
+      "unit_id": "workspace__user_task_20__create_calendar_event__end_time",
+      "context_id": "9cb14231b422d9314e14a7ab",
+      "cluster_id": "workspace__user_task_20",
+      "suite": "workspace",
+      "fault_class": "M2",
+      "path": "/artifact-source/4a6fb1bfcf87/workspace__user_task_20__create_calendar_event__end_time__M2.json",
+      "sha256": "b231168203eb3f949c1c92396874247e93c274b323361c689fff4a0c580f6457",
+      "remaining_actor_budget": 13,
+      "selection_sha256": "0237085a54ade1675d34685570f41f6eda19ecb36704f22754036ea853eae4e1"
+    },
+    {
+      "packet_id": "workspace__user_task_21__create_calendar_event__start_time__M1",
+      "unit_id": "workspace__user_task_21__create_calendar_event__start_time",
+      "context_id": "233a573a0e0de7a1d2441977",
+      "cluster_id": "workspace__user_task_21",
+      "suite": "workspace",
+      "fault_class": "M1",
+      "path": "/artifact-source/7b8f18e21443/workspace__user_task_21__create_calendar_event__start_time__M1.json",
+      "sha256": "dfa8449e42ef2a09e5d226ed7bd3c11ef28bf3560c5c6c130fbef35e6747ce05",
+      "remaining_actor_budget": 13,
+      "selection_sha256": "20ee42e08a8f2b545180d0e35a6fd54751ce0feee24927394f9c0c62f4ee6b4b"
+    },
+    {
+      "packet_id": "workspace__user_task_29__append_to_file__file_id__M1",
+      "unit_id": "workspace__user_task_29__append_to_file__file_id",
+      "context_id": "4f9961ce3466cffb0ff4eaaf",
+      "cluster_id": "workspace__user_task_29",
+      "suite": "workspace",
+      "fault_class": "M1",
+      "path": "/artifact-source/dae1342b80ce/workspace__user_task_29__append_to_file__file_id__M1.json",
+      "sha256": "3807bdd75add6dbc03b340c5e971fdb7ddb367022f7541dbc6e611b1c7bfd7e3",
+      "remaining_actor_budget": 14,
+      "selection_sha256": "f2706e42c93cd327b7bcd33e95c9c2ba22de9112db339177c7db281ba9efd04c"
+    },
+    {
+      "packet_id": "workspace__user_task_32__create_file__filename__M1",
+      "unit_id": "workspace__user_task_32__create_file__filename",
+      "context_id": "b0f21b285e0a91ed2ee3e981",
+      "cluster_id": "workspace__user_task_32",
+      "suite": "workspace",
+      "fault_class": "M1",
+      "path": "/artifact-source/253a2fe7cb17/workspace__user_task_32__create_file__filename__M1.json",
+      "sha256": "dc5a5cbe491a6f6366e8968739456a9c44ab3b9dca52947ec9f5808818868810",
+      "remaining_actor_budget": 14,
+      "selection_sha256": "55451ee6d4a91662730a0811a471514297eb676e54e32a0b928618bd38ad2753"
+    },
+    {
+      "packet_id": "workspace__user_task_35__delete_file__file_id__M1",
+      "unit_id": "workspace__user_task_35__delete_file__file_id",
+      "context_id": "61adc9f96a29894d0ab38c6a",
+      "cluster_id": "workspace__user_task_35",
+      "suite": "workspace",
+      "fault_class": "M1",
+      "path": "/artifact-source/3caf1731ab3e/workspace__user_task_35__delete_file__file_id__M1.json",
+      "sha256": "6437a3170c29aa1e6c304979c2921b93b6ef1c70ebed26e33b627301bb994e5f",
+      "remaining_actor_budget": 14,
+      "selection_sha256": "bee23d468c7f9c423abac2ced34b6d15633b275b8e3477edccde259431a079b5"
+    },
+    {
+      "packet_id": "workspace__user_task_6__create_calendar_event__end_time__M2",
+      "unit_id": "workspace__user_task_6__create_calendar_event__end_time",
+      "context_id": "37f11c14eb9bc024faaebb7a",
+      "cluster_id": "workspace__user_task_6",
+      "suite": "workspace",
+      "fault_class": "M2",
+      "path": "/artifact-source/9c41ef7416e2/workspace__user_task_6__create_calendar_event__end_time__M2.json",
+      "sha256": "89d1d316709e3dd05b3eab08dec21c465c3f3c62f521ccb2861432a0533f60ed",
+      "remaining_actor_budget": 14,
+      "selection_sha256": "12f50fb3326140894c120fac66dc9a7f6777c55f0a62ac9065798adf2ab0cb18"
+    },
+    {
+      "packet_id": "workspace__user_task_7__reschedule_calendar_event__new_end_time__M2",
+      "unit_id": "workspace__user_task_7__reschedule_calendar_event__new_end_time",
+      "context_id": "87fb308e5377bb1539f9aae6",
+      "cluster_id": "workspace__user_task_7",
+      "suite": "workspace",
+      "fault_class": "M2",
+      "path": "/artifact-source/af1a26327e68/workspace__user_task_7__reschedule_calendar_event__new_end_time__M2.json",
+      "sha256": "de72a0f1ff6ee4c701f22ec0bbb83f08978c71f399e395a6e60206be502717b3",
+      "remaining_actor_budget": 13,
+      "selection_sha256": "0f63fc99ac33a3279b1a8086265019079ed7eefc579d0533b89329215f5389f3"
+    },
+    {
+      "packet_id": "workspace__user_task_9__create_calendar_event__start_time__M1",
+      "unit_id": "workspace__user_task_9__create_calendar_event__start_time",
+      "context_id": "3c499356b4fe9516173be852",
+      "cluster_id": "workspace__user_task_9",
+      "suite": "workspace",
+      "fault_class": "M1",
+      "path": "/artifact-source/de1c38b9c49f/workspace__user_task_9__create_calendar_event__start_time__M1.json",
+      "sha256": "5b92e1fcf63b2fe0fa74c4eb7a37861e36cc37ac6d87889d506d0e7561feba21",
+      "remaining_actor_budget": 14,
+      "selection_sha256": "16412bdf0e04b10494b2286d160e2dbca015c35ccbe632d80e446378ea55d114"
+    }
+  ],
+  "all_candidate_hashes": [
+    {
+      "task": "banking__user_task_0",
+      "selected_packet_id": "banking__user_task_0__send_money__recipient__M1",
+      "candidates": [
+        {
+          "packet_id": "banking__user_task_0__send_money__recipient__M1",
+          "selection_sha256": "6619f87c5e9560ab51b00d26d8d94328b105fc110990f60a908da6955c75d38a",
+          "selected": true,
+          "packet_path": "/artifact-source/f873d02a6178/banking__user_task_0__send_money__recipient__M1.json",
+          "packet_sha256": "014db56bbd669bea751c7a3a118b881d8ca21218fde8b7c607b85a225b96285c"
+        },
+        {
+          "packet_id": "banking__user_task_0__send_money__amount__M1",
+          "selection_sha256": "e861cc28700deb0d97f241c3d4c2cf47054e4205fe435fb2f259c1daa0f88a9e",
+          "selected": false,
+          "packet_path": "/artifact-source/d38763099a50/banking__user_task_0__send_money__amount__M1.json",
+          "packet_sha256": "a316390aaa2e2fcb9606a8a3fa8239acab6788dd27698d6e18a5c0006f64d3ed"
+        }
+      ]
+    },
+    {
+      "task": "banking__user_task_11",
+      "selected_packet_id": "banking__user_task_11__send_money__amount__M1",
+      "candidates": [
+        {
+          "packet_id": "banking__user_task_11__send_money__amount__M1",
+          "selection_sha256": "28731bcc96cc733fa940b4d94dd1712d82ff87689827987588bd109c9a5d5f5e",
+          "selected": true,
+          "packet_path": "/artifact-source/78d09bdc11da/banking__user_task_11__send_money__amount__M1.json",
+          "packet_sha256": "b801c9030604a1edee24a7011ec4f60a8b8c786f0fa95aed7eae8c7e751d9797"
+        },
+        {
+          "packet_id": "banking__user_task_11__send_money__amount__M2",
+          "selection_sha256": "2928a3fd80e92a282ef2bf5eeea6cfc538298c687a8193928199aa13673b7e8a",
+          "selected": false,
+          "packet_path": "/artifact-source/8dd01672eee6/banking__user_task_11__send_money__amount__M2.json",
+          "packet_sha256": "a05b0c8cd2a3214eb7f83b75a80dc84f1e3954877900af494e52df9bd567244e"
+        }
+      ]
+    },
+    {
+      "task": "banking__user_task_13",
+      "selected_packet_id": "banking__user_task_13__update_user_info__street__M1",
+      "candidates": [
+        {
+          "packet_id": "banking__user_task_13__update_user_info__street__M1",
+          "selection_sha256": "e4a8a717fbc33effba5aa98725bf6e62871122c0bec803f0f191060f0a4b7b5f",
+          "selected": true,
+          "packet_path": "/artifact-source/940dea77181d/banking__user_task_13__update_user_info__street__M1.json",
+          "packet_sha256": "d584e3aeff57b22589cf3d1dfb59c7f457c95b991883d9f46790caeba6905bbf"
+        }
+      ]
+    },
+    {
+      "task": "banking__user_task_15",
+      "selected_packet_id": "banking__user_task_15__update_scheduled_transaction__amount__M2",
+      "candidates": [
+        {
+          "packet_id": "banking__user_task_15__update_scheduled_transaction__amount__M2",
+          "selection_sha256": "19c3db3d930689293b28f3570c914eb04a1f8e80d022977c0696457a55f23b28",
+          "selected": true,
+          "packet_path": "/artifact-source/8b235d448055/banking__user_task_15__update_scheduled_transaction__amount__M2.json",
+          "packet_sha256": "18bd5e0c662df4ef542be7e808f5ea8a0cf5bf322739a5462e9fb04066736a14"
+        },
+        {
+          "packet_id": "banking__user_task_15__update_scheduled_transaction__amount__M1",
+          "selection_sha256": "1da8fedd4077689772b62ed5a18d5c57e49a0f23885650d9eee43da898b07076",
+          "selected": false,
+          "packet_path": "/artifact-source/1f33978b56ee/banking__user_task_15__update_scheduled_transaction__amount__M1.json",
+          "packet_sha256": "9bba617cc408a949de423205a0bef1fe7649a96b888d74ca7f80b0cdb30e98bf"
+        },
+        {
+          "packet_id": "banking__user_task_15__update_scheduled_transaction__recipient__M2",
+          "selection_sha256": "2e99fb340a0e53cf16f2377e8dd6bec6eb888d9b3593642f7a3c71d11330b94c",
+          "selected": false,
+          "packet_path": "/artifact-source/2db9706a90a9/banking__user_task_15__update_scheduled_transaction__recipient__M2.json",
+          "packet_sha256": "32bc5359afc92f7b8ca83c7429a7ced24c3e4fe97b9f26de22c58ea5cdc3b810"
+        },
+        {
+          "packet_id": "banking__user_task_15__send_money__recipient__M2",
+          "selection_sha256": "3c911354c0cd7a33bfd7be3d0807ff960cc700ea12a1dd96b3ba9fbefd91d4ef",
+          "selected": false,
+          "packet_path": "/artifact-source/fa1728408cb2/banking__user_task_15__send_money__recipient__M2.json",
+          "packet_sha256": "1afd11500ef5a3c09c29e524c03934ddf04a708dd1689cc8cb10a5772c92c993"
+        },
+        {
+          "packet_id": "banking__user_task_15__send_money__amount__M2",
+          "selection_sha256": "494e6d96e8f4f3b866759b48351cb7d861001c5fd9a8686436fed53b0d03a838",
+          "selected": false,
+          "packet_path": "/artifact-source/9814d72d3f72/banking__user_task_15__send_money__amount__M2.json",
+          "packet_sha256": "3a13ce7b3de78aa220cf5f93bfcf3cf494f12f043a25560498874ce0ea763be9"
+        },
+        {
+          "packet_id": "banking__user_task_15__send_money__amount__M1",
+          "selection_sha256": "7fcef65e84722b10784543ed04d76c43a439ff4e953ba9fde917a3868e80145e",
+          "selected": false,
+          "packet_path": "/artifact-source/34151209c0b0/banking__user_task_15__send_money__amount__M1.json",
+          "packet_sha256": "ef8f92d5d23eaafd58a373e35044daccdb50778f4c31cb7f4d049a9c92f0fb8c"
+        },
+        {
+          "packet_id": "banking__user_task_15__update_user_info__street__M1",
+          "selection_sha256": "afd7732a3031bd04772e11117e954453d1b1ff1664fda08b83c4f4297e29c019",
+          "selected": false,
+          "packet_path": "/artifact-source/42491b4ec73d/banking__user_task_15__update_user_info__street__M1.json",
+          "packet_sha256": "81776d081a28ab3c912f116de8b0de526f5257a837742f63f1e8ad9afc602c7d"
+        },
+        {
+          "packet_id": "banking__user_task_15__update_user_info__street__M2",
+          "selection_sha256": "d38adaaed9ee0176eae1454527d5726becc39c9aeeda8d23928fa22030d2b440",
+          "selected": false,
+          "packet_path": "/artifact-source/d70b320af459/banking__user_task_15__update_user_info__street__M2.json",
+          "packet_sha256": "90e2f4c32caecd74c30fea874c860875d2e79ea494e45373c7365b460cea3cfb"
+        },
+        {
+          "packet_id": "banking__user_task_15__update_scheduled_transaction__recipient__M1",
+          "selection_sha256": "dc0f92016b64faf10e31317468bc0f12afa8a39358e089a290741515400ab673",
+          "selected": false,
+          "packet_path": "/artifact-source/83a03ec8e78e/banking__user_task_15__update_scheduled_transaction__recipient__M1.json",
+          "packet_sha256": "6a7bf91c0d8bf600757a6a677080ad8d6a9d2f4b2e4bc004e3c677ce424a5a99"
+        },
+        {
+          "packet_id": "banking__user_task_15__send_money__recipient__M1",
+          "selection_sha256": "f098739afa2187103ca8506012706347bf0813c7db18c1d0602c25e36b84fe53",
+          "selected": false,
+          "packet_path": "/artifact-source/0703afa45ca7/banking__user_task_15__send_money__recipient__M1.json",
+          "packet_sha256": "f6dbcdfc3b1639aabc98978a0b2579f05c95abeeb784386dc5c4dee09c77adc2"
+        }
+      ]
+    },
+    {
+      "task": "banking__user_task_3",
+      "selected_packet_id": "banking__user_task_3__send_money__recipient__M1",
+      "candidates": [
+        {
+          "packet_id": "banking__user_task_3__send_money__recipient__M1",
+          "selection_sha256": "1806ae114a7d0c0193c8cb00e115885041f5a2d10372df07467c70a18300ab49",
+          "selected": true,
+          "packet_path": "/artifact-source/dbc7fbb09c76/banking__user_task_3__send_money__recipient__M1.json",
+          "packet_sha256": "5ee602124df57613a2bb26b494c58b4310d7ab9ad2259a08991d1cd6ba22496e"
+        },
+        {
+          "packet_id": "banking__user_task_3__send_money__recipient__M2",
+          "selection_sha256": "1f1fa91c323a3c32b1cd07c85d6a14388260e5c4758e48e032e5c2f860acbc3c",
+          "selected": false,
+          "packet_path": "/artifact-source/a13f28ea58d2/banking__user_task_3__send_money__recipient__M2.json",
+          "packet_sha256": "74fd073d30358e1da5d11a48cf681e3f644c2672b9b64fd5932b145ba3752430"
+        },
+        {
+          "packet_id": "banking__user_task_3__send_money__amount__M2",
+          "selection_sha256": "8d41dbf53806c746639b82168b2729f8a12f539e21b9523be256c454e8630ad2",
+          "selected": false,
+          "packet_path": "/artifact-source/562efa7fa28d/banking__user_task_3__send_money__amount__M2.json",
+          "packet_sha256": "39e3338b94ee7a0c0f9eebf50a8faa405345d60cd4304a1a9c145bef26281397"
+        },
+        {
+          "packet_id": "banking__user_task_3__send_money__amount__M1",
+          "selection_sha256": "a91ec559c28af68eb7722aaf02d34af909e0379a583c4d645c166e6b476aca25",
+          "selected": false,
+          "packet_path": "/artifact-source/b40552b3028b/banking__user_task_3__send_money__amount__M1.json",
+          "packet_sha256": "d30125c0710a117246680487862b70a9314315561316fbe8f2e88b0fe9af7531"
+        }
+      ]
+    },
+    {
+      "task": "banking__user_task_4",
+      "selected_packet_id": "banking__user_task_4__send_money__amount__M1",
+      "candidates": [
+        {
+          "packet_id": "banking__user_task_4__send_money__amount__M1",
+          "selection_sha256": "05364f45e9bf2e1b5b3215b3bdb4c638ce4443445c8b6bc75f90c9cd8946a4f9",
+          "selected": true,
+          "packet_path": "/artifact-source/c87aa13c34fd/banking__user_task_4__send_money__amount__M1.json",
+          "packet_sha256": "2b67151b7171cd18981d5ac6f3c7d04eaefe30c6a1506d9625a8008747762825"
+        },
+        {
+          "packet_id": "banking__user_task_4__send_money__recipient__M1",
+          "selection_sha256": "bbefdd6e454682114765b51bc480e378565dc4cbf0c9c61bec1c763c888624e3",
+          "selected": false,
+          "packet_path": "/artifact-source/739abc99d28c/banking__user_task_4__send_money__recipient__M1.json",
+          "packet_sha256": "60e324d269986d2c2ff9f906409d53b2ec345b7145e3dfe9ec028922ffefecbc"
+        },
+        {
+          "packet_id": "banking__user_task_4__send_money__recipient__M2",
+          "selection_sha256": "d04ebb61d2409003948c38d06ffeffe362bd222018d98c33600d362211534fb4",
+          "selected": false,
+          "packet_path": "/artifact-source/b3035c37a485/banking__user_task_4__send_money__recipient__M2.json",
+          "packet_sha256": "adb511308dda392112df4171816bc82189e25acf742a1e6ba2738a9d33b0a932"
+        },
+        {
+          "packet_id": "banking__user_task_4__send_money__amount__M2",
+          "selection_sha256": "f44f8a226530e1f61bebbb8118e022b1b68af29eeca0ddb878917e5763b553c4",
+          "selected": false,
+          "packet_path": "/artifact-source/b40dac52c67c/banking__user_task_4__send_money__amount__M2.json",
+          "packet_sha256": "8591e2d4220b8321c4a1804d59c02ef7985126991a5fcb5dbb929d301846453f"
+        }
+      ]
+    },
+    {
+      "task": "slack__user_task_1",
+      "selected_packet_id": "slack__user_task_1__send_direct_message__recipient__M2",
+      "candidates": [
+        {
+          "packet_id": "slack__user_task_1__send_direct_message__recipient__M2",
+          "selection_sha256": "106c4c7ce759990af12e8a48646ee41ec23301f9cea650426510764644afef46",
+          "selected": true,
+          "packet_path": "/artifact-source/47f3aa623b97/slack__user_task_1__send_direct_message__recipient__M2.json",
+          "packet_sha256": "134c25b27ec4ef7409fc461db768ce794abc045203592653d465da5ffd8f1394"
+        }
+      ]
+    },
+    {
+      "task": "slack__user_task_12",
+      "selected_packet_id": "slack__user_task_12__send_channel_message__channel__M2",
+      "candidates": [
+        {
+          "packet_id": "slack__user_task_12__send_channel_message__channel__M2",
+          "selection_sha256": "80e1411899f21026a786e8d866679efaacacc13b2f6c3e155cdee5f4d7147b58",
+          "selected": true,
+          "packet_path": "/artifact-source/67aae4aa9930/slack__user_task_12__send_channel_message__channel__M2.json",
+          "packet_sha256": "9ec4c83f558942faeb1596845868dd5a0a5e5d868a6f7a2707163d7a96ca1e01"
+        }
+      ]
+    },
+    {
+      "task": "slack__user_task_13",
+      "selected_packet_id": "slack__user_task_13__send_direct_message__recipient__M2",
+      "candidates": [
+        {
+          "packet_id": "slack__user_task_13__send_direct_message__recipient__M2",
+          "selection_sha256": "a01dd573e2076ce71da884d2b73cfb6dc3734066ff37ab40578544c541c308b3",
+          "selected": true,
+          "packet_path": "/artifact-source/ea4080145c6a/slack__user_task_13__send_direct_message__recipient__M2.json",
+          "packet_sha256": "8500dc0cde7ad9a2a16183b553a55ae13110ecff3e173207492f0a761568b80e"
+        }
+      ]
+    },
+    {
+      "task": "slack__user_task_5",
+      "selected_packet_id": "slack__user_task_5__send_channel_message__channel__M2",
+      "candidates": [
+        {
+          "packet_id": "slack__user_task_5__send_channel_message__channel__M2",
+          "selection_sha256": "2115512dd9a168716654ea061038197f76ca4d6fb10c2cecc4de5f3eae445d4b",
+          "selected": true,
+          "packet_path": "/artifact-source/47754eac16cd/slack__user_task_5__send_channel_message__channel__M2.json",
+          "packet_sha256": "02cf7c305cc7ab3376eca20bc38b4bc026d3172ea6ca88ae521dd5cfb80405fa"
+        }
+      ]
+    },
+    {
+      "task": "slack__user_task_6",
+      "selected_packet_id": "slack__user_task_6__send_direct_message__recipient__M2",
+      "candidates": [
+        {
+          "packet_id": "slack__user_task_6__send_direct_message__recipient__M2",
+          "selection_sha256": "f7bbf1efe29bfbad5b1a4152d838b5684235a7d9c1270bd9ffe95989ed461afa",
+          "selected": true,
+          "packet_path": "/artifact-source/ac4692772878/slack__user_task_6__send_direct_message__recipient__M2.json",
+          "packet_sha256": "569596d53cf511090283ed3dac346ccc276f1b36fbfd22d552f138fcdcf1de06"
+        }
+      ]
+    },
+    {
+      "task": "slack__user_task_7",
+      "selected_packet_id": "slack__user_task_7__add_user_to_channel__channel__M2",
+      "candidates": [
+        {
+          "packet_id": "slack__user_task_7__add_user_to_channel__channel__M2",
+          "selection_sha256": "e1107000d22c95a3bd86472a266df6d6e146694e196b50fe264f365f35b18be0",
+          "selected": true,
+          "packet_path": "/artifact-source/82b7a478a236/slack__user_task_7__add_user_to_channel__channel__M2.json",
+          "packet_sha256": "ffa48dffdaa3c30a4709592dc47860f3e2ad0caa3bdf83b4459477f6a649dbfc"
+        }
+      ]
+    },
+    {
+      "task": "slack__user_task_8",
+      "selected_packet_id": "slack__user_task_8__send_channel_message__channel__M2",
+      "candidates": [
+        {
+          "packet_id": "slack__user_task_8__send_channel_message__channel__M2",
+          "selection_sha256": "922998316590d632a3da671e62801ea5f48de42323966bf68d1a633588b676f4",
+          "selected": true,
+          "packet_path": "/artifact-source/37499a7f413e/slack__user_task_8__send_channel_message__channel__M2.json",
+          "packet_sha256": "a1f560d19cb5ff66df15de4ec3ac5ab68cde6457993ae42487c5f212f98c6d1e"
+        }
+      ]
+    },
+    {
+      "task": "slack__user_task_9",
+      "selected_packet_id": "slack__user_task_9__add_user_to_channel__user__M2",
+      "candidates": [
+        {
+          "packet_id": "slack__user_task_9__add_user_to_channel__user__M2",
+          "selection_sha256": "135138b5ae9d5ff897d8b55b035e37e82c9f47d4d1eeca40469341db2659456f",
+          "selected": true,
+          "packet_path": "/artifact-source/3f6cb6571eff/slack__user_task_9__add_user_to_channel__user__M2.json",
+          "packet_sha256": "790558bdc6829acdc396da868595bb830157060e8100a4b17df31803e3b21fe5"
+        },
+        {
+          "packet_id": "slack__user_task_9__add_user_to_channel__channel__M2",
+          "selection_sha256": "79ca028751966fbe7fe5838365a309caf38961366ddde72c07c0d42223a5c80c",
+          "selected": false,
+          "packet_path": "/artifact-source/cd17dd84e1cf/slack__user_task_9__add_user_to_channel__channel__M2.json",
+          "packet_sha256": "3af71ec98e4f6be491ed6bdfd51a9a0b3c9ebd6d84a735c34b3ca6a0340423af"
+        }
+      ]
+    },
+    {
+      "task": "travel__user_task_0",
+      "selected_packet_id": "travel__user_task_0__reserve_hotel__hotel__M1",
+      "candidates": [
+        {
+          "packet_id": "travel__user_task_0__reserve_hotel__hotel__M1",
+          "selection_sha256": "0d863fc9ff8e08d40c50d19a468022a8e914fd3b0710727b1fe549d63d2d3280",
+          "selected": true,
+          "packet_path": "/artifact-source/95f1c26cbb6a/travel__user_task_0__reserve_hotel__hotel__M1.json",
+          "packet_sha256": "b264b6b8463dad7ba4ddb0806ee4131dcd9fa2985403c090697154917ec0273b"
+        },
+        {
+          "packet_id": "travel__user_task_0__reserve_hotel__end_day__M1",
+          "selection_sha256": "e80b1fcab967de30f4ae63e4aeb13345caa463fc6fea8111fc66c4df170cd4b6",
+          "selected": false,
+          "packet_path": "/artifact-source/94c8b0cb925e/travel__user_task_0__reserve_hotel__end_day__M1.json",
+          "packet_sha256": "78bbdcab2fcf2711ff8231aa9327612705eab0590fd84ae994f7c3fa8160faf0"
+        },
+        {
+          "packet_id": "travel__user_task_0__reserve_hotel__start_day__M1",
+          "selection_sha256": "f1227777271d88499353d4216716eae50182a54d8957286b9e92849be822e89f",
+          "selected": false,
+          "packet_path": "/artifact-source/7f90dc9aa548/travel__user_task_0__reserve_hotel__start_day__M1.json",
+          "packet_sha256": "bf0a79ee2cf6d492bf28bddcf225eddd28b1ef3a2a123df90b161488c9119c2c"
+        }
+      ]
+    },
+    {
+      "task": "travel__user_task_1",
+      "selected_packet_id": "travel__user_task_1__create_calendar_event__location__M1",
+      "candidates": [
+        {
+          "packet_id": "travel__user_task_1__create_calendar_event__location__M1",
+          "selection_sha256": "1c4dfb044eb1fc5a58ad6e82ba79f7479ac37f3b96806761487144e1c46b13e9",
+          "selected": true,
+          "packet_path": "/artifact-source/a1487f760d54/travel__user_task_1__create_calendar_event__location__M1.json",
+          "packet_sha256": "bb1dbbb7d9fb2731da2549019c5db6df22fa9dfddb92dea45a937d295eb317e1"
+        },
+        {
+          "packet_id": "travel__user_task_1__create_calendar_event__title__M1",
+          "selection_sha256": "7cb37e17f07ee452411a4a9e7cd4947c621c489965a96c57e5367711e7952f1a",
+          "selected": false,
+          "packet_path": "/artifact-source/e8fec148e710/travel__user_task_1__create_calendar_event__title__M1.json",
+          "packet_sha256": "2731116e2a6da48853485e99bacfe9490558aa591846d59f26f0901638a1632a"
+        }
+      ]
+    },
+    {
+      "task": "travel__user_task_3",
+      "selected_packet_id": "travel__user_task_3__send_email__subject__M1",
+      "candidates": [
+        {
+          "packet_id": "travel__user_task_3__send_email__subject__M1",
+          "selection_sha256": "4b65549e79f36dfa237efcc28db19d92d6cf4475a7d1ed3e0916356ee4b8e2bc",
+          "selected": true,
+          "packet_path": "/artifact-source/c714ec97d969/travel__user_task_3__send_email__subject__M1.json",
+          "packet_sha256": "dfb76d68734684bb5ce3b70fa30ce535bb3fa7f910ff6c03d3824d8608fc2a70"
+        },
+        {
+          "packet_id": "travel__user_task_3__send_email__body__M1",
+          "selection_sha256": "eefa91e7acbfa2841ed7d8004fda18edd357469bd7d34122cc7fa12d5d4cf6a3",
+          "selected": false,
+          "packet_path": "/artifact-source/1e7f355164da/travel__user_task_3__send_email__body__M1.json",
+          "packet_sha256": "3cab470691ac335f7d7ee7cf1bf6025871727259ce287a4dc435da385535243c"
+        }
+      ]
+    },
+    {
+      "task": "travel__user_task_4",
+      "selected_packet_id": "travel__user_task_4__create_calendar_event__location__M1",
+      "candidates": [
+        {
+          "packet_id": "travel__user_task_4__create_calendar_event__location__M1",
+          "selection_sha256": "46ac96a433a818034b49c8506973f33b391fd1047164bbe416651da2fecece32",
+          "selected": true,
+          "packet_path": "/artifact-source/ce3f6fef4326/travel__user_task_4__create_calendar_event__location__M1.json",
+          "packet_sha256": "a7515b04d94e12a87c6c5efd6d63932f2d1b467a71ca5909235811ae33250761"
+        },
+        {
+          "packet_id": "travel__user_task_4__create_calendar_event__title__M1",
+          "selection_sha256": "b103757d40e18c4319409ce68dc16d8656f443245483e4f587bf1a3e105bd2e4",
+          "selected": false,
+          "packet_path": "/artifact-source/9bb5bcd937a3/travel__user_task_4__create_calendar_event__title__M1.json",
+          "packet_sha256": "e662628ba2cf198e5834a0167e0ef7b6ec2359d5cad8f637474a79827e833788"
+        }
+      ]
+    },
+    {
+      "task": "travel__user_task_7",
+      "selected_packet_id": "travel__user_task_7__create_calendar_event__location__M1",
+      "candidates": [
+        {
+          "packet_id": "travel__user_task_7__create_calendar_event__location__M1",
+          "selection_sha256": "93a561922d10881e6f0c7e04fb37c82f2698ce892b77acce0892d297810aef2c",
+          "selected": true,
+          "packet_path": "/artifact-source/12eace44f656/travel__user_task_7__create_calendar_event__location__M1.json",
+          "packet_sha256": "7f5d521410b9982516d6c4d2247789fba5d703e05550e9bdaf130222dc61aba6"
+        },
+        {
+          "packet_id": "travel__user_task_7__create_calendar_event__title__M1",
+          "selection_sha256": "a66329d62f899cf9435e2a043130c0249f6520a8dfbf246adcb397c313cb81e6",
+          "selected": false,
+          "packet_path": "/artifact-source/51cfd241644a/travel__user_task_7__create_calendar_event__title__M1.json",
+          "packet_sha256": "1bd4d0cb485338f37859f67ad11d55eabc443bb5df83db1d082858827cefbb15"
+        }
+      ]
+    },
+    {
+      "task": "travel__user_task_8",
+      "selected_packet_id": "travel__user_task_8__create_calendar_event__location__M1",
+      "candidates": [
+        {
+          "packet_id": "travel__user_task_8__create_calendar_event__location__M1",
+          "selection_sha256": "eb5d819ff52eef54ea6029b007b66bbd9338d442ab4a2f837caa32aaf8e23f2d",
+          "selected": true,
+          "packet_path": "/artifact-source/a93abc792cdb/travel__user_task_8__create_calendar_event__location__M1.json",
+          "packet_sha256": "254fa6d0f785ffabbc391d79d8abe1863b15b60a8a4ac1a014503c713f409c75"
+        },
+        {
+          "packet_id": "travel__user_task_8__create_calendar_event__title__M1",
+          "selection_sha256": "fa758e2e444103f8bb48e02623a5fed7b69cf0a0adf8beb5ceb6f392697dbb22",
+          "selected": false,
+          "packet_path": "/artifact-source/feaa7fcfa22f/travel__user_task_8__create_calendar_event__title__M1.json",
+          "packet_sha256": "fa48bf0026f2940a0b05d95b5f1361d0b139fc2161d567a7fc8601bcda7d8c6e"
+        }
+      ]
+    },
+    {
+      "task": "workspace__user_task_12",
+      "selected_packet_id": "workspace__user_task_12__create_calendar_event__end_time__M2",
+      "candidates": [
+        {
+          "packet_id": "workspace__user_task_12__create_calendar_event__end_time__M2",
+          "selection_sha256": "1173ee7f17febc3dc0d0b4329ec99fa9f0a123ef65fb777c5f456d5b50843e5a",
+          "selected": true,
+          "packet_path": "/artifact-source/5dfaeb6ff445/workspace__user_task_12__create_calendar_event__end_time__M2.json",
+          "packet_sha256": "c894fa17af64d1841b7dc2853e18a7de265b9827f3ea2414112c1a663151e492"
+        },
+        {
+          "packet_id": "workspace__user_task_12__create_calendar_event__start_time__M1",
+          "selection_sha256": "159ba7d2777c1ef719f2af41b8d16c4309e1469f8722106966aa6eee7120fd5b",
+          "selected": false,
+          "packet_path": "/artifact-source/b4c9de33ebdc/workspace__user_task_12__create_calendar_event__start_time__M1.json",
+          "packet_sha256": "51e20b5a5900bf97527f9f5a764c9116af4cdd415b043fd60f4d4d05b6b9ecc2"
+        },
+        {
+          "packet_id": "workspace__user_task_12__create_calendar_event__start_time__M2",
+          "selection_sha256": "5a86f8aa6808e69d345d18c95a4240b514f61e3223f857dd0ec6ea61f74f43df",
+          "selected": false,
+          "packet_path": "/artifact-source/e821043368e2/workspace__user_task_12__create_calendar_event__start_time__M2.json",
+          "packet_sha256": "40a96ace03c8c944d25b65c48d5f744edb270285bcb785a95114cbc39d60be56"
+        },
+        {
+          "packet_id": "workspace__user_task_12__create_calendar_event__end_time__M1",
+          "selection_sha256": "61fc6413723f2224be7007361b04eb02bfb60ee31f851e46aadf553dc0716626",
+          "selected": false,
+          "packet_path": "/artifact-source/ce7d9422e455/workspace__user_task_12__create_calendar_event__end_time__M1.json",
+          "packet_sha256": "1378d5b6778db7d55dfce818021c1fddfdf9e8401f186dfc21fc33a3ae8da488"
+        }
+      ]
+    },
+    {
+      "task": "workspace__user_task_15",
+      "selected_packet_id": "workspace__user_task_15__create_calendar_event__end_time__M1",
+      "candidates": [
+        {
+          "packet_id": "workspace__user_task_15__create_calendar_event__end_time__M1",
+          "selection_sha256": "1f1398fc4eeac4a2509e2292524bc1a328b2af6f3699d1529fe185c10f9d15c1",
+          "selected": true,
+          "packet_path": "/artifact-source/3e4db6b290c9/workspace__user_task_15__create_calendar_event__end_time__M1.json",
+          "packet_sha256": "d7488fb3b202539c187367ba6626c34029ba6952e1015a0742eb275d5220ad7a"
+        },
+        {
+          "packet_id": "workspace__user_task_15__create_calendar_event__start_time__M1",
+          "selection_sha256": "a11b7602d4dd49391c509e11d23f4f3f4a8368a316d337ff89b833b47e9e871a",
+          "selected": false,
+          "packet_path": "/artifact-source/2129abe163b7/workspace__user_task_15__create_calendar_event__start_time__M1.json",
+          "packet_sha256": "bc2e8cef1841669bae498806d38cbc5ee6ec2dcbf11b471c0804ff3c01563af2"
+        },
+        {
+          "packet_id": "workspace__user_task_15__create_calendar_event__location__M1",
+          "selection_sha256": "ee70e671340c68ed06cbbeb817eb845f1769c320ec2fc89653bd8b324431b198",
+          "selected": false,
+          "packet_path": "/artifact-source/f5a7d49a7814/workspace__user_task_15__create_calendar_event__location__M1.json",
+          "packet_sha256": "4290c18861c1484126dfdfe9948b6dd9206ffe6bf813c9bb8394df094d8b8b53"
+        }
+      ]
+    },
+    {
+      "task": "workspace__user_task_18",
+      "selected_packet_id": "workspace__user_task_18__create_calendar_event__end_time__M1",
+      "candidates": [
+        {
+          "packet_id": "workspace__user_task_18__create_calendar_event__end_time__M1",
+          "selection_sha256": "4af0586c1ee921bcc6d0fa70d3c5f5739821a683e498a2282a29729d2deb7e02",
+          "selected": true,
+          "packet_path": "/artifact-source/78cd77076d3d/workspace__user_task_18__create_calendar_event__end_time__M1.json",
+          "packet_sha256": "dc4406d38d9eec941eeae2ce0501e75053c96c7df5174a89c397dd8a8439199c"
+        },
+        {
+          "packet_id": "workspace__user_task_18__create_calendar_event__start_time__M1",
+          "selection_sha256": "59d329bf377053ff259fdbc78de19c632394b2527751797714b6283d6f29821b",
+          "selected": false,
+          "packet_path": "/artifact-source/4226ded1d5fc/workspace__user_task_18__create_calendar_event__start_time__M1.json",
+          "packet_sha256": "e7b5aa1f50b8705341283b49a74f92000709c255de4f87521874b179bcab027d"
+        }
+      ]
+    },
+    {
+      "task": "workspace__user_task_20",
+      "selected_packet_id": "workspace__user_task_20__create_calendar_event__end_time__M2",
+      "candidates": [
+        {
+          "packet_id": "workspace__user_task_20__create_calendar_event__end_time__M2",
+          "selection_sha256": "0237085a54ade1675d34685570f41f6eda19ecb36704f22754036ea853eae4e1",
+          "selected": true,
+          "packet_path": "/artifact-source/4a6fb1bfcf87/workspace__user_task_20__create_calendar_event__end_time__M2.json",
+          "packet_sha256": "b231168203eb3f949c1c92396874247e93c274b323361c689fff4a0c580f6457"
+        },
+        {
+          "packet_id": "workspace__user_task_20__create_calendar_event__end_time__M1",
+          "selection_sha256": "19972b67be74648a8ed0bbb2776636948f604aa9452790a13f85fbb383cb9154",
+          "selected": false,
+          "packet_path": "/artifact-source/f1164bf00a87/workspace__user_task_20__create_calendar_event__end_time__M1.json",
+          "packet_sha256": "e24655897671e99e1cc663d3e93a869090cc230729be8465d69c1c156afc5191"
+        },
+        {
+          "packet_id": "workspace__user_task_20__create_calendar_event__start_time__M2",
+          "selection_sha256": "cbe7d0440abbd587ec6e5a47eb4ac8f724ba682c4a06e3a6c0dd32c10bd43384",
+          "selected": false,
+          "packet_path": "/artifact-source/85cb860215e2/workspace__user_task_20__create_calendar_event__start_time__M2.json",
+          "packet_sha256": "d9e8c42df757052722553e8d69b6190789710494ee63c768e5365543daf4992f"
+        },
+        {
+          "packet_id": "workspace__user_task_20__create_calendar_event__start_time__M1",
+          "selection_sha256": "f3bb1ae8dafa97db30b067c0c4efc794e43c6b2ba9d0b2ed28d7ff3cb5350138",
+          "selected": false,
+          "packet_path": "/artifact-source/014d770e96b6/workspace__user_task_20__create_calendar_event__start_time__M1.json",
+          "packet_sha256": "e0a6684f337f36bb22f231dab70f530d7381a87ba31107f86adaca71ad50d180"
+        }
+      ]
+    },
+    {
+      "task": "workspace__user_task_21",
+      "selected_packet_id": "workspace__user_task_21__create_calendar_event__start_time__M1",
+      "candidates": [
+        {
+          "packet_id": "workspace__user_task_21__create_calendar_event__start_time__M1",
+          "selection_sha256": "20ee42e08a8f2b545180d0e35a6fd54751ce0feee24927394f9c0c62f4ee6b4b",
+          "selected": true,
+          "packet_path": "/artifact-source/7b8f18e21443/workspace__user_task_21__create_calendar_event__start_time__M1.json",
+          "packet_sha256": "dfa8449e42ef2a09e5d226ed7bd3c11ef28bf3560c5c6c130fbef35e6747ce05"
+        },
+        {
+          "packet_id": "workspace__user_task_21__create_calendar_event__participants__M1",
+          "selection_sha256": "2807b3b311409ba5c266ae58409573c2d8709a7f1f3159a988f546f4e28069e2",
+          "selected": false,
+          "packet_path": "/artifact-source/3aac9e8b21b3/workspace__user_task_21__create_calendar_event__participants__M1.json",
+          "packet_sha256": "77f7920ff4b72231d0962b24f1c6286264c6bf19e3aba9831a9924c1fd6e8c15"
+        },
+        {
+          "packet_id": "workspace__user_task_21__create_calendar_event__participants__M2",
+          "selection_sha256": "3e9f230073ae4f6694bbf28fe91f3ccd4450decc3aa6e7ff3c2c93c5c19b54fa",
+          "selected": false,
+          "packet_path": "/artifact-source/34bedbee1f72/workspace__user_task_21__create_calendar_event__participants__M2.json",
+          "packet_sha256": "df823dee2ce4b3fed69228dbaf0682fb370c0e1e3fcb152bbf932289b502e33b"
+        },
+        {
+          "packet_id": "workspace__user_task_21__create_calendar_event__end_time__M2",
+          "selection_sha256": "7c53b369ef1beb5cf08c099b13b8ea7559f5133680eb76d3f18dedd38d780210",
+          "selected": false,
+          "packet_path": "/artifact-source/e13828c34369/workspace__user_task_21__create_calendar_event__end_time__M2.json",
+          "packet_sha256": "805bb19d506a624744a074441da801dbd67b5165a89a16deab282e076dcbe4ec"
+        },
+        {
+          "packet_id": "workspace__user_task_21__create_calendar_event__start_time__M2",
+          "selection_sha256": "943a58e51729f1c5bbab4fa6d921dac7aefbecd06a160da16cec2843889c896c",
+          "selected": false,
+          "packet_path": "/artifact-source/9d727db0af17/workspace__user_task_21__create_calendar_event__start_time__M2.json",
+          "packet_sha256": "40ebf00d7817a7e80537d48f06d3fb8a4cb682559b69cb8092f35c2ec5d1ed7b"
+        },
+        {
+          "packet_id": "workspace__user_task_21__create_calendar_event__end_time__M1",
+          "selection_sha256": "cfa8bd476bb8d824ff0eb104169b05b314ab588ed1e038fcbf217a833e1a4f92",
+          "selected": false,
+          "packet_path": "/artifact-source/bbe734bf03e2/workspace__user_task_21__create_calendar_event__end_time__M1.json",
+          "packet_sha256": "3c92e82022735c39ee973fbbdca7a469081401f49ef4f0edbd14fc6c24ac5454"
+        }
+      ]
+    },
+    {
+      "task": "workspace__user_task_29",
+      "selected_packet_id": "workspace__user_task_29__append_to_file__file_id__M1",
+      "candidates": [
+        {
+          "packet_id": "workspace__user_task_29__append_to_file__file_id__M1",
+          "selection_sha256": "f2706e42c93cd327b7bcd33e95c9c2ba22de9112db339177c7db281ba9efd04c",
+          "selected": true,
+          "packet_path": "/artifact-source/dae1342b80ce/workspace__user_task_29__append_to_file__file_id__M1.json",
+          "packet_sha256": "3807bdd75add6dbc03b340c5e971fdb7ddb367022f7541dbc6e611b1c7bfd7e3"
+        }
+      ]
+    },
+    {
+      "task": "workspace__user_task_32",
+      "selected_packet_id": "workspace__user_task_32__create_file__filename__M1",
+      "candidates": [
+        {
+          "packet_id": "workspace__user_task_32__create_file__filename__M1",
+          "selection_sha256": "55451ee6d4a91662730a0811a471514297eb676e54e32a0b928618bd38ad2753",
+          "selected": true,
+          "packet_path": "/artifact-source/253a2fe7cb17/workspace__user_task_32__create_file__filename__M1.json",
+          "packet_sha256": "dc5a5cbe491a6f6366e8968739456a9c44ab3b9dca52947ec9f5808818868810"
+        },
+        {
+          "packet_id": "workspace__user_task_32__create_file__filename__M2",
+          "selection_sha256": "ca465835a30444659fb0eda55a5f06563c53c4ec447b86f867861e93b0fbf4e4",
+          "selected": false,
+          "packet_path": "/artifact-source/2c3a227e4dee/workspace__user_task_32__create_file__filename__M2.json",
+          "packet_sha256": "df024afdf3ea53c700790ed32a1d5b7c0e3d4b26101cf9114e40323ddf685cc4"
+        }
+      ]
+    },
+    {
+      "task": "workspace__user_task_35",
+      "selected_packet_id": "workspace__user_task_35__delete_file__file_id__M1",
+      "candidates": [
+        {
+          "packet_id": "workspace__user_task_35__delete_file__file_id__M1",
+          "selection_sha256": "bee23d468c7f9c423abac2ced34b6d15633b275b8e3477edccde259431a079b5",
+          "selected": true,
+          "packet_path": "/artifact-source/3caf1731ab3e/workspace__user_task_35__delete_file__file_id__M1.json",
+          "packet_sha256": "6437a3170c29aa1e6c304979c2921b93b6ef1c70ebed26e33b627301bb994e5f"
+        }
+      ]
+    },
+    {
+      "task": "workspace__user_task_6",
+      "selected_packet_id": "workspace__user_task_6__create_calendar_event__end_time__M2",
+      "candidates": [
+        {
+          "packet_id": "workspace__user_task_6__create_calendar_event__end_time__M2",
+          "selection_sha256": "12f50fb3326140894c120fac66dc9a7f6777c55f0a62ac9065798adf2ab0cb18",
+          "selected": true,
+          "packet_path": "/artifact-source/9c41ef7416e2/workspace__user_task_6__create_calendar_event__end_time__M2.json",
+          "packet_sha256": "89d1d316709e3dd05b3eab08dec21c465c3f3c62f521ccb2861432a0533f60ed"
+        },
+        {
+          "packet_id": "workspace__user_task_6__create_calendar_event__end_time__M1",
+          "selection_sha256": "22146c832c10a24640bca2e47c26f7bd77bf74c74fd7ade70b8aa02015d2dc9e",
+          "selected": false,
+          "packet_path": "/artifact-source/9bd9b832eb90/workspace__user_task_6__create_calendar_event__end_time__M1.json",
+          "packet_sha256": "72d3cfa969d64d34341108545d9cff095fd08b9523b9926ba15fbc852de2bce1"
+        },
+        {
+          "packet_id": "workspace__user_task_6__create_calendar_event__start_time__M2",
+          "selection_sha256": "45a3bc622fdde7218bc3c59929b0bec269832125d56bd620183ee4ff298a97b8",
+          "selected": false,
+          "packet_path": "/artifact-source/8864ff1d06be/workspace__user_task_6__create_calendar_event__start_time__M2.json",
+          "packet_sha256": "4e99aaa1fb6d39675591862094b7b216382d834728555e919ea10d7e622f8b15"
+        },
+        {
+          "packet_id": "workspace__user_task_6__create_calendar_event__start_time__M1",
+          "selection_sha256": "4fc1c8bbab1d2088726105fe3f13009a78e45d34e4190c637cd085d3bd0af9ae",
+          "selected": false,
+          "packet_path": "/artifact-source/16742d51300f/workspace__user_task_6__create_calendar_event__start_time__M1.json",
+          "packet_sha256": "9f653f894b2506af723a84926950356d6ba207aac373cd557314911a12d33847"
+        },
+        {
+          "packet_id": "workspace__user_task_6__create_calendar_event__participants__M1",
+          "selection_sha256": "f2a051a5d828c89e5d0ebf81f4296a1ac11b01007efa3908caecb930df473a9e",
+          "selected": false,
+          "packet_path": "/artifact-source/9b9f92c9884e/workspace__user_task_6__create_calendar_event__participants__M1.json",
+          "packet_sha256": "959a90440f15ef8ff5efdb5e6ebec2ece270d521894362c4c5c79e06cb875306"
+        },
+        {
+          "packet_id": "workspace__user_task_6__create_calendar_event__participants__M2",
+          "selection_sha256": "f7f27717e404865cdd76203161070711e01551a420510180ee6dd9489e50d606",
+          "selected": false,
+          "packet_path": "/artifact-source/86e4f8c09f2a/workspace__user_task_6__create_calendar_event__participants__M2.json",
+          "packet_sha256": "20aa4bd35994d8cc0db934a145a40caaf7d1f1738380e1cf4113fa2ce520ade2"
+        }
+      ]
+    },
+    {
+      "task": "workspace__user_task_7",
+      "selected_packet_id": "workspace__user_task_7__reschedule_calendar_event__new_end_time__M2",
+      "candidates": [
+        {
+          "packet_id": "workspace__user_task_7__reschedule_calendar_event__new_end_time__M2",
+          "selection_sha256": "0f63fc99ac33a3279b1a8086265019079ed7eefc579d0533b89329215f5389f3",
+          "selected": true,
+          "packet_path": "/artifact-source/af1a26327e68/workspace__user_task_7__reschedule_calendar_event__new_end_time__M2.json",
+          "packet_sha256": "de72a0f1ff6ee4c701f22ec0bbb83f08978c71f399e395a6e60206be502717b3"
+        },
+        {
+          "packet_id": "workspace__user_task_7__reschedule_calendar_event__new_end_time__M1",
+          "selection_sha256": "41badd4f5088a88da3c04a3814a5c23b55a340fbbc66c711dd81bede2064f189",
+          "selected": false,
+          "packet_path": "/artifact-source/7be68dd0e969/workspace__user_task_7__reschedule_calendar_event__new_end_time__M1.json",
+          "packet_sha256": "f2bfde80b6711c27f04af6fb72349f129129e2dfdd5e7e4b68f7141477d2b2fb"
+        },
+        {
+          "packet_id": "workspace__user_task_7__reschedule_calendar_event__new_start_time__M2",
+          "selection_sha256": "4c1a8614f8beb496480aba1d0ab3f74cc6be1b754adc2c9cf99645d5fc11e2c6",
+          "selected": false,
+          "packet_path": "/artifact-source/b826ccbf539d/workspace__user_task_7__reschedule_calendar_event__new_start_time__M2.json",
+          "packet_sha256": "76693fed434e34d6d2d4d4a2e6c853a2248f4302fced69e4468f228a08c415e0"
+        },
+        {
+          "packet_id": "workspace__user_task_7__reschedule_calendar_event__new_start_time__M1",
+          "selection_sha256": "be32f1c463fb0386666f3e4f65724701d77816ea4361e47a6f4399dcee22b175",
+          "selected": false,
+          "packet_path": "/artifact-source/2a80ba5c4b28/workspace__user_task_7__reschedule_calendar_event__new_start_time__M1.json",
+          "packet_sha256": "c177626eec003497d23c2fe7243b2fb88ee55aaf0f41af16ca9600330850ad98"
+        }
+      ]
+    },
+    {
+      "task": "workspace__user_task_9",
+      "selected_packet_id": "workspace__user_task_9__create_calendar_event__start_time__M1",
+      "candidates": [
+        {
+          "packet_id": "workspace__user_task_9__create_calendar_event__start_time__M1",
+          "selection_sha256": "16412bdf0e04b10494b2286d160e2dbca015c35ccbe632d80e446378ea55d114",
+          "selected": true,
+          "packet_path": "/artifact-source/de1c38b9c49f/workspace__user_task_9__create_calendar_event__start_time__M1.json",
+          "packet_sha256": "5b92e1fcf63b2fe0fa74c4eb7a37861e36cc37ac6d87889d506d0e7561feba21"
+        },
+        {
+          "packet_id": "workspace__user_task_9__create_calendar_event__participants__M1",
+          "selection_sha256": "2aae0a3768a1589c1aa72ff0c8cd4cb496cfaf1ffcebb6f3ebfde8dc9f6b77f0",
+          "selected": false,
+          "packet_path": "/artifact-source/e035f7da827b/workspace__user_task_9__create_calendar_event__participants__M1.json",
+          "packet_sha256": "0ff6f40e9fa1569e144d7fe526b17e577c238c8e3c92441f8218d35facefff74"
+        },
+        {
+          "packet_id": "workspace__user_task_9__create_calendar_event__end_time__M2",
+          "selection_sha256": "6b04bdd7a8334a7043af2b09919870c7adb4e183b65b0d69529412d4762e7999",
+          "selected": false,
+          "packet_path": "/artifact-source/912e549f1115/workspace__user_task_9__create_calendar_event__end_time__M2.json",
+          "packet_sha256": "bf6f1e45bd11a06aab0baa9e0437c043d19c0c0f235124fc319837be3e73aab2"
+        },
+        {
+          "packet_id": "workspace__user_task_9__create_calendar_event__end_time__M1",
+          "selection_sha256": "81d892d9bca8e1c19f68daf97e2d7729894e4d73fdd0d6ef47afcaf970c521d7",
+          "selected": false,
+          "packet_path": "/artifact-source/ccc2d4785e8a/workspace__user_task_9__create_calendar_event__end_time__M1.json",
+          "packet_sha256": "a00345ad9c0649b4cf2b4cd2dd45b27209d933be2a04bff5f2ccf8157198fecb"
+        },
+        {
+          "packet_id": "workspace__user_task_9__create_calendar_event__start_time__M2",
+          "selection_sha256": "fc3c059b40d6b1b50ee77d4e6f8263ff6c11a26f8a446ff355bca0dacfc14e5f",
+          "selected": false,
+          "packet_path": "/artifact-source/dcd35d49898b/workspace__user_task_9__create_calendar_event__start_time__M2.json",
+          "packet_sha256": "2823829660f1bfd6fba4ba025033aabaf864be9693ea1a0c6afdf45b43c47c2b"
+        }
+      ]
+    }
+  ],
+  "source_inputs": {
+    "actor_manifest": {
+      "path": "/artifact-source/4e8d855bea3c/manifest.json",
+      "sha256": "4b26532f10a8158f07fa5a92790d0321456db3b68348f39264e4d85216fdaac6"
+    },
+    "update_index": {
+      "path": "/artifact-source/a2bbfc694eea/index.json",
+      "sha256": "ce371309e567b080c77bb3c389a18c78a540016e60e90c288e43b01a3046753c"
+    },
+    "unforced_contexts": {
+      "path": "/artifact-source/4fe7cf1c3a7c/spontaneous-contexts.json",
+      "sha256": "a9957098c9485265ffb0784e35ae33a5f9e6c09a288428ceee6c898be3711a0f"
+    },
+    "original_main_protocol": {
+      "path": "/artifact-source/75fea3f3f4a9/protocol-main.json",
+      "sha256": "8be1ae961cf19854b861da93520feaf27a91a9c05d772faac8442787438e714f"
+    },
+    "strict_effect_helper": {
+      "path": "/artifact-source/8d09049d1eb3/strict_effects.py",
+      "sha256": "cb25e7e5b3c02e49f3d67ec396ad552b53d6704a53c7bd47f5b5bac88ca1defb"
+    },
+    "source_noop_correction": {
+      "path": "/artifact-source/d68616b64448/SOURCE-NOOP-CORRECTION.md",
+      "sha256": "35cac4a5c6333efd4f1fcba611776ec984cc7a1c6095f1d735a3a3de2807f2a7"
+    },
+    "mode_finalization": {
+      "path": "flash_expansion/model-configs.json",
+      "sha256": "04f6e8430078257b27f8843cffaa6ccf6d595b244687db1340ea6da0f82acec2"
+    }
+  },
+  "efficacy_outputs_opened_for_selection": 0,
+  "selection_scope": "Prospective fixed source panel for new routes; retrospective outcome-independent common-row readback for existing routes. No winner/outcome-based pruning."
+}
