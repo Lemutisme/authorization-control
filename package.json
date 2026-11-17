@@ -1,0 +1,83 @@
+{
+  "name": "pi-authorization-control",
+  "version": "0.1.0",
+  "description": "Tool-call authorization, Pi integration, and authorization auditing for LLM agents",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./pi-agent": {
+      "types": "./src/pi-agent.d.ts",
+      "import": "./src/pi-agent.js"
+    },
+    "./extension": {
+      "types": "./extensions/authorization.d.ts",
+      "import": "./extensions/authorization.js"
+    },
+    "./artifact": {
+      "types": "./src/artifact.d.ts",
+      "import": "./src/artifact.js"
+    }
+  },
+  "bin": {
+    "authorization-artifact": "./bin/artifact.js"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/authorization.js"
+    ]
+  },
+  "files": [
+    "src/",
+    "extensions/",
+    "bin/",
+    "artifact/",
+    "examples/",
+    "docs/",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check:types": "tsc --noEmit --strict --module ESNext --moduleResolution Bundler --target ES2022 test/types.ts",
+    "demo": "node examples/sdk-demo.js",
+    "check:pack": "node test/pack-check.js",
+    "research:setup": "python3 -m pipeline setup",
+    "reproduce": ".venv/bin/python -m pipeline reproduce --all",
+    "experiment": ".venv/bin/python -m pipeline run",
+    "figures": ".venv/bin/python -m pipeline figures",
+    "test:research": ".venv/bin/python -m unittest discover -s test -p \"test_*.py\"",
+    "check:pipeline": ".venv/bin/python test/qualify_pipeline.py"
+  },
+  "dependencies": {
+    "ajv": "8.17.1"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-agent-core": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-agent-core": {
+      "optional": true
+    },
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@earendil-works/pi-agent-core": "1.5.0",
+    "@earendil-works/pi-ai": "1.5.0",
+    "@earendil-works/pi-coding-agent": "1.5.0",
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "@types/node": "22.19.19",
+    "typescript": "5.9.3"
+  }
+}

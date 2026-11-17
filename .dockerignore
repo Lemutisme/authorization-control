@@ -1,0 +1,15 @@
+.git
+.venv
+.venv-previous
+.work
+.deps
+node_modules
+results
+runs
+dist
+**/__pycache__
+*.log
+*.tgz
+.env
+.env.*
+!.env.example

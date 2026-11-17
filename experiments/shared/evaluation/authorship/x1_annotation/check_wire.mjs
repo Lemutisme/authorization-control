@@ -1,0 +1,22 @@
+/** Model-free HTTP/SSE test of the annotation-specific strict tool and blind input. */
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
+const fixture=JSON.parse(await readFile(process.argv[2],'utf8'));
+const clientUrl=process.env.PI_ANNOTATION_QUALIFICATION_CLIENT?pathToFileURL(resolve(process.env.PI_ANNOTATION_QUALIFICATION_CLIENT)):new URL('../../refinement/pi_review_client.mjs',import.meta.url);
+const {draw,legacyPayload}=await import(clientUrl.href);
+let captured,fetchCalls=0;
+const args=JSON.stringify(fixture.synthetic_reply);
+const item={id:'fc_annotation_fixture',type:'function_call',call_id:'call_annotation_fixture',name:'annotate_final_response',arguments:args};
+const response={id:'resp_annotation_fixture',object:'response',created_at:1,status:'completed',model:'gpt-6-luna',output:[item],usage:{input_tokens:13,output_tokens:19,total_tokens:32}};
+const events=[{type:'response.created',response:{...response,status:'in_progress',output:[]}},{type:'response.output_item.added',output_index:0,item:{...item,arguments:''}},{type:'response.function_call_arguments.delta',item_id:item.id,output_index:0,delta:args},{type:'response.function_call_arguments.done',item_id:item.id,output_index:0,arguments:args},{type:'response.output_item.done',output_index:0,item},{type:'response.completed',response}];
+const sse=events.map(e=>`event: ${e.type}\ndata: ${JSON.stringify(e)}\n\n`).join('')+'data: [DONE]\n\n';
+const result=await draw({history:fixture.history,tools:fixture.tools,instructions:fixture.instructions,connection:{base_url:'https://example.invalid/v1/responses',api_key:'model-free-sentinel'}},{fetchImpl:async(_url,init)=>{fetchCalls++;captured=JSON.parse(init.body);return new Response(sse,{status:200,headers:{'content-type':'text/event-stream'}});}});
+assert.deepEqual(captured,{...legacyPayload(fixture.history,fixture.tools,fixture.instructions),stream:true});
+assert.equal(captured.tools.length,1);assert.equal(captured.tools[0].name,'annotate_final_response');assert.equal(captured.tools[0].strict,true);assert.equal(captured.tools[0].parameters.additionalProperties,false);assert.equal(captured.model,'gpt-6-luna');assert.equal(captured.reasoning.effort,'low');assert.equal(captured.store,false);assert.equal(captured.parallel_tool_calls,false);
+assert.deepEqual(JSON.parse(captured.input[0].content),fixture.packet);
+const text=JSON.stringify(captured);for(const s of ['PRIVATE_CASE_SENTINEL','PRIVATE_ARM_SENTINEL','PRIVATE_FEEDBACK_SENTINEL','PRIVATE_UNIT_SENTINEL','POLICY_ERROR_SENTINEL'])assert(!text.includes(s));
+assert.equal(fetchCalls,1);assert.equal(result.status,'completed');assert.equal(result.output[0].name,'annotate_final_response');assert.deepEqual(JSON.parse(result.output[0].arguments),fixture.synthetic_reply);
+console.log(JSON.stringify({passed:true,model:'gpt-6-luna',reasoning:'low',max_output_tokens:1536,tool:'annotate_final_response',strict_schema:true,blind_packet_exact:true,provider_usage:result.meta.provider_usage,http_payload_sha256:createHash('sha256').update(JSON.stringify(captured)).digest('hex'),client_source_sha256:createHash('sha256').update(await readFile(clientUrl)).digest('hex'),fake_fetch_calls:fetchCalls,model_requests:0,network_requests:0}));

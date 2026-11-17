@@ -1,0 +1,57 @@
+/** Exact-request response sharing for paired experiments; not a defense. */
+import {AssistantMessageEventStream} from '@earendil-works/pi-ai';
+import {streamSimple} from '@earendil-works/pi-ai/api/openai-responses';
+import {readFile,writeFile,mkdir,rename} from 'node:fs/promises';
+import {join} from 'node:path';
+import {createHash} from 'node:crypto';
+
+// Preserve array order, literal strings and object insertion order as serialized
+// by the SDK. Do not erase history differences to manufacture a cache hit.
+const hash=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
+export class CoupledStream {
+  constructor(directory,{backend=streamSimple}={}){this.directory=directory;this.backend=backend;this.records=[];this.occurrences=new Map();}
+  stream=(model,context,options)=>{
+    const out=new AssistantMessageEventStream();const record={cache_hit:false,network_requested:false};this.records.push(record);
+    let cached=null,file=null;
+    (async()=>{
+      await mkdir(this.directory,{recursive:true});
+      const inner=this.backend(model,context,{...options,onPayload:async payload=>{
+        const replacement=await options.onPayload?.(payload,model);const actual=replacement===undefined?payload:replacement;
+        const identity=hash({api:model.api,provider:model.provider,endpoint_hash:createHash('sha256').update(model.baseUrl).digest('hex'),principal_hash:hash(options.apiKey??null),payload:actual});
+        const occurrence=(this.occurrences.get(identity)||0)+1;this.occurrences.set(identity,occurrence);const key=hash([identity,occurrence]);record.payload=actual;record.input_identity=identity;record.occurrence=occurrence;record.request_sha256=key;file=join(this.directory,key+'.json');
+        try{const entry=JSON.parse(await readFile(file,'utf8'));if(entry.request_sha256!==key || hash(entry.message)!==entry.response_sha256)throw new Error('cache_identity_mismatch');cached=entry;}
+        catch(error){if(error.code==='ENOENT')cached=null;else{record.cache_error=true;throw error;}}
+        if(cached){record.cache_hit=true;record.response_sha256=cached.response_sha256;throw new Error('COUPLED_RESPONSE_READY');}
+        record.network_requested=true;return actual;
+      }});
+      let terminal=null;
+      for await(const event of inner){
+        if(cached)continue;
+        if(event.type==='error' && event.error)event.error.errorMessage='provider_request_failed';
+        if(event.type==='done'||event.type==='error')terminal=event;else out.push(event);
+      }
+      if(cached){
+        const message=structuredClone(cached.message);record.tool_call_count=message.content.filter(c=>c.type==='toolCall').length;
+        out.push({type:'start',partial:message});
+        out.push(message.stopReason==='error'||message.stopReason==='aborted'?{type:'error',reason:message.stopReason,error:message}:{type:'done',reason:message.stopReason,message});out.end();
+      }else{
+        const message=await inner.result();record.tool_call_count=message.content.filter(c=>c.type==='toolCall').length;
+        if(message.stopReason==='error'||message.stopReason==='aborted')message.errorMessage='provider_request_failed';
+        const containsPrivateThinking=message.content.some(c=>c.type==='thinking' && c.thinking?.trim());
+        record.response_sha256=hash(message);record.cacheable=!containsPrivateThinking;
+        if(file && record.network_requested && !containsPrivateThinking){
+          const saved={request_sha256:record.request_sha256,response_sha256:record.response_sha256,message};
+          const temporary=file+'.tmp';await writeFile(temporary,JSON.stringify(saved)+'\n');await rename(temporary,file);
+        }
+        if(terminal)out.push(terminal);
+        out.end(message);
+      }
+    })().catch(()=>{
+      record.cache_error=true;const message={role:'assistant',api:model.api,provider:model.provider,model:model.id,
+        content:[],stopReason:'error',errorMessage:'coupled_stream_failed',timestamp:Date.now(),
+        usage:{input:0,output:0,cacheRead:0,cacheWrite:0,totalTokens:0,cost:{input:0,output:0,cacheRead:0,cacheWrite:0,total:0}}};
+      out.push({type:'error',reason:'error',error:message});out.end();
+    });
+    return out;
+  };
+}

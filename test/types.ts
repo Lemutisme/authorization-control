@@ -1,0 +1,16 @@
+import { AuthorizationController, type Policy } from '../src/index.js';
+import { guardTool } from '../src/pi-agent.js';
+import type { AgentTool } from '@earendil-works/pi-agent-core';
+import { summarizeMatched } from '../src/artifact.js';
+import extension from '../extensions/authorization.js';
+const policy: Policy = { version: 1, id: 'types', rules: [] };
+const controller = new AuthorizationController({ policy });
+declare const tool: AgentTool;
+const wrapped: AgentTool = guardTool(tool, controller);
+void wrapped;
+void extension;
+const readback = summarizeMatched({ rows: [] });
+const count: number = readback.freshResponses;
+void count;
+const result = controller.begin({ toolCallId: 'id', toolName: 'name', input: {} });
+if (result.allowed) void controller.finish(result.ticket, { input: result.input, result: {} });

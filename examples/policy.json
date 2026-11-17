@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "id": "example-payment-105",
+  "rules": [
+    {
+      "tool": "demo_pay",
+      "effect": "allow",
+      "arguments": {
+        "type": "object",
+        "required": ["recipient", "amount"],
+        "additionalProperties": false,
+        "properties": { "recipient": { "const": "demo-merchant" }, "amount": { "const": 105 } }
+      }
+    }
+  ]
+}

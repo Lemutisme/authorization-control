@@ -1,0 +1,6 @@
+agentdojo @ git+https://github.com/ethz-spylab/agentdojo.git@089ed468cf3ed0322acc66b0211f26d9d90dbf60
+secagent @ git+https://github.com/sunblaze-ucb/progent.git@b02783b896d4bf01a2adf24738015e258db8d35b
+jsonschema==4.25.1
+pydantic==2.14.2
+docstring-parser==0.18.0
+matplotlib==3.10.7

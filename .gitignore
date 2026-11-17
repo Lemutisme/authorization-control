@@ -1,7 +1,15 @@
 results/
+runs/
 __pycache__/
 *.pyc
 .venv/
+.venv-previous/
+.work/
+.deps/
+node_modules/
+dist/
+*.tgz
+*.log
 .env
 .env.*
 !*.example

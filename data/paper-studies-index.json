@@ -1,0 +1,423 @@
+{
+  "runs": [
+    {
+      "study": "reviewer",
+      "run": "contract-factorial-clean-repeat-v1",
+      "records": 486,
+      "native_episodes": 485
+    },
+    {
+      "study": "reviewer",
+      "run": "contract-factorial-main-v1",
+      "records": 5406,
+      "native_episodes": 5405
+    },
+    {
+      "study": "banking",
+      "run": "refinement-clean-repeat-v2",
+      "records": 129,
+      "native_episodes": 80
+    },
+    {
+      "study": "banking",
+      "run": "refinement-episode-main-v2",
+      "records": 1353,
+      "native_episodes": 845
+    },
+    {
+      "study": "approvers",
+      "run": "authorship-x3-clean-repeat-v1",
+      "records": 129,
+      "native_episodes": 64
+    },
+    {
+      "study": "approvers",
+      "run": "authorship-x3-main-v1",
+      "records": 1353,
+      "native_episodes": 676
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-auto-approve-attack-direct-none-v1",
+      "records": 217,
+      "native_episodes": 108
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-auto-approve-attack-feedback-adaptive-none-v1",
+      "records": 217,
+      "native_episodes": 108
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-auto-approve-attack-insist-none-v1",
+      "records": 217,
+      "native_episodes": 108
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-auto-approve-honest-direct-none-v1",
+      "records": 25,
+      "native_episodes": 12
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-narrow-only-attack-direct-none-v1",
+      "records": 217,
+      "native_episodes": 108
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-narrow-only-attack-feedback-adaptive-none-v1",
+      "records": 217,
+      "native_episodes": 108
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-narrow-only-attack-insist-none-v1",
+      "records": 217,
+      "native_episodes": 108
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-narrow-only-honest-direct-none-v1",
+      "records": 25,
+      "native_episodes": 12
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-none-attack-direct-none-v1",
+      "records": 109,
+      "native_episodes": 108
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-none-attack-feedback-adaptive-none-v1",
+      "records": 109,
+      "native_episodes": 108
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-none-attack-insist-none-v1",
+      "records": 109,
+      "native_episodes": 108
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-none-honest-direct-none-v1",
+      "records": 13,
+      "native_episodes": 12
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-none-t-only-direct-low-v1",
+      "records": 13,
+      "native_episodes": 12
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-pga-minimal-attack-direct-none-v1",
+      "records": 109,
+      "native_episodes": 108
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-pga-minimal-attack-feedback-adaptive-none-v1",
+      "records": 109,
+      "native_episodes": 108
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-pga-minimal-attack-insist-none-v1",
+      "records": 109,
+      "native_episodes": 108
+    },
+    {
+      "study": "replacement",
+      "run": "authorship-x2b-heldout-pga-minimal-honest-direct-none-v1",
+      "records": 13,
+      "native_episodes": 12
+    },
+    {
+      "study": "replacement-development",
+      "run": "authorship-x2b-attack-development-auto-approve-attack-direct-none-v1",
+      "records": 73,
+      "native_episodes": 36
+    },
+    {
+      "study": "replacement-development",
+      "run": "authorship-x2b-attack-development-auto-approve-attack-feedback-adaptive-none-v1",
+      "records": 73,
+      "native_episodes": 36
+    },
+    {
+      "study": "replacement-development",
+      "run": "authorship-x2b-attack-development-auto-approve-attack-insist-none-v1",
+      "records": 73,
+      "native_episodes": 36
+    },
+    {
+      "study": "replacement-development",
+      "run": "authorship-x2b-attack-development-narrow-only-attack-direct-none-v1",
+      "records": 73,
+      "native_episodes": 36
+    },
+    {
+      "study": "replacement-development",
+      "run": "authorship-x2b-attack-development-narrow-only-attack-feedback-adaptive-none-v1",
+      "records": 73,
+      "native_episodes": 36
+    },
+    {
+      "study": "replacement-development",
+      "run": "authorship-x2b-attack-development-narrow-only-attack-insist-none-v1",
+      "records": 73,
+      "native_episodes": 36
+    },
+    {
+      "study": "replacement-development",
+      "run": "authorship-x2b-attack-development-none-attack-direct-none-v1",
+      "records": 37,
+      "native_episodes": 36
+    },
+    {
+      "study": "replacement-development",
+      "run": "authorship-x2b-attack-development-none-attack-feedback-adaptive-none-v1",
+      "records": 37,
+      "native_episodes": 36
+    },
+    {
+      "study": "replacement-development",
+      "run": "authorship-x2b-attack-development-none-attack-insist-none-v1",
+      "records": 37,
+      "native_episodes": 36
+    },
+    {
+      "study": "replacement-development",
+      "run": "authorship-x2b-attack-development-pga-minimal-attack-direct-none-v1",
+      "records": 37,
+      "native_episodes": 36
+    },
+    {
+      "study": "replacement-development",
+      "run": "authorship-x2b-attack-development-pga-minimal-attack-feedback-adaptive-none-v1",
+      "records": 37,
+      "native_episodes": 36
+    },
+    {
+      "study": "replacement-development",
+      "run": "authorship-x2b-attack-development-pga-minimal-attack-insist-none-v1",
+      "records": 37,
+      "native_episodes": 36
+    },
+    {
+      "study": "replacement-development",
+      "run": "authorship-x2b-capability-none-honest-direct-medium-v1",
+      "records": 5,
+      "native_episodes": 4
+    },
+    {
+      "study": "replacement-development",
+      "run": "authorship-x2b-capability-none-honest-direct-none-v1",
+      "records": 5,
+      "native_episodes": 4
+    },
+    {
+      "study": "replacement-development",
+      "run": "authorship-x2b-capability-none-t-only-direct-low-v1",
+      "records": 5,
+      "native_episodes": 4
+    },
+    {
+      "study": "reconstruction-faults",
+      "run": "authorship-x4-main-v2",
+      "records": 1765,
+      "native_episodes": 756
+    },
+    {
+      "study": "sealed",
+      "run": "sealed-x6-main-no-agreement-v1",
+      "records": 710,
+      "native_episodes": 336
+    },
+    {
+      "study": "sealed",
+      "run": "sealed-x6-main-no-gate-v1",
+      "records": 337,
+      "native_episodes": 336
+    },
+    {
+      "study": "sealed",
+      "run": "sealed-x6-main-opaque-no-update-v1",
+      "records": 673,
+      "native_episodes": 336
+    },
+    {
+      "study": "sealed",
+      "run": "sealed-x6-main-originalauto-v1",
+      "records": 673,
+      "native_episodes": 336
+    },
+    {
+      "study": "sealed",
+      "run": "sealed-x6-main-sealed-compatible-v1",
+      "records": 735,
+      "native_episodes": 336
+    },
+    {
+      "study": "sealed",
+      "run": "sealed-x6-main-sealed-exact-v1",
+      "records": 727,
+      "native_episodes": 336
+    },
+    {
+      "study": "sealed",
+      "run": "sealed-x6-main-trusted-edit-v1",
+      "records": 709,
+      "native_episodes": 336
+    },
+    {
+      "study": "sealed",
+      "run": "sealed-x6-main-unsealed-ctor-exact-v1",
+      "records": 727,
+      "native_episodes": 336
+    },
+    {
+      "study": "sealed-natural",
+      "run": "sealed-x6-natural-main-v2",
+      "records": 64,
+      "native_episodes": 56
+    },
+    {
+      "study": "reduced-reconstruction",
+      "run": "matched-natural-reconstruction-main-v1",
+      "records": 169,
+      "native_episodes": 0
+    },
+    {
+      "study": "repeated-probes",
+      "run": "authorship-x2-initial-auto-approve-main-v2",
+      "records": 218,
+      "native_episodes": 112
+    },
+    {
+      "study": "repeated-probes",
+      "run": "authorship-x2-initial-narrow-only-main-v2",
+      "records": 218,
+      "native_episodes": 112
+    },
+    {
+      "study": "repeated-probes",
+      "run": "authorship-x2-initial-pga-minimal-main-v2",
+      "records": 113,
+      "native_episodes": 112
+    },
+    {
+      "study": "repeated-probes",
+      "run": "authorship-x2-post-auto-approve-main-v2",
+      "records": 196,
+      "native_episodes": 98
+    },
+    {
+      "study": "repeated-probes",
+      "run": "authorship-x2-post-narrow-only-main-v2",
+      "records": 196,
+      "native_episodes": 98
+    },
+    {
+      "study": "repeated-probes",
+      "run": "authorship-x2-post-pga-minimal-main-v2",
+      "records": 99,
+      "native_episodes": 98
+    },
+    {
+      "study": "policy-replay",
+      "run": "control-boundary-main-v1",
+      "records": 270,
+      "native_episodes": 0
+    },
+    {
+      "study": "policy-replay",
+      "run": "refinement-initial-authority-v1",
+      "records": 290,
+      "native_episodes": 0
+    },
+    {
+      "study": "policy-replay",
+      "run": "strong-banking-main-v1",
+      "records": 677,
+      "native_episodes": 507
+    },
+    {
+      "study": "conditional-updates",
+      "run": "refinement-conditional-main-v3",
+      "records": 785,
+      "native_episodes": 0
+    },
+    {
+      "study": "construction",
+      "run": "refinement-construction-fixed-full-v1",
+      "records": 181,
+      "native_episodes": 0
+    },
+    {
+      "study": "fault-prefixes",
+      "run": "authorship-x1-prefix-main-v1",
+      "records": 194,
+      "native_episodes": 35
+    },
+    {
+      "study": "fault-prefixes",
+      "run": "authorship-x1-prepare-v2",
+      "records": 966,
+      "native_episodes": 0
+    },
+    {
+      "study": "fault-annotations",
+      "run": "authorship-x1-annotation-aggregate-v1",
+      "records": 3,
+      "native_episodes": 0
+    },
+    {
+      "study": "fault-annotations",
+      "run": "authorship-x1-annotation-final-v1",
+      "records": 3,
+      "native_episodes": 0
+    }
+  ],
+  "records": {
+    "reviewer": 5892,
+    "banking": 1482,
+    "approvers": 1482,
+    "replacement": 2045,
+    "replacement-development": 675,
+    "reconstruction-faults": 1765,
+    "sealed": 5291,
+    "sealed-natural": 64,
+    "reduced-reconstruction": 169,
+    "repeated-probes": 1040,
+    "policy-replay": 1237,
+    "conditional-updates": 785,
+    "construction": 181,
+    "fault-prefixes": 1160,
+    "fault-annotations": 6
+  },
+  "native_episodes": {
+    "reviewer": 5890,
+    "banking": 925,
+    "approvers": 740,
+    "replacement": 1356,
+    "replacement-development": 444,
+    "reconstruction-faults": 756,
+    "sealed": 2688,
+    "sealed-natural": 56,
+    "reduced-reconstruction": 0,
+    "repeated-probes": 630,
+    "policy-replay": 507,
+    "conditional-updates": 0,
+    "construction": 0,
+    "fault-prefixes": 35,
+    "fault-annotations": 0
+  },
+  "scope": "All studies reported in the manuscript, plus the original development/selection and fault-prefix inputs. Main and development populations remain separate."
+}
