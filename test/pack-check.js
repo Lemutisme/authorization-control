@@ -10,7 +10,7 @@ const root = fileURLToPath(new URL('..', import.meta.url));
 const temporary = await mkdtemp(join(tmpdir(), 'authorization-pack-'));
 try {
   const [pack] = JSON.parse(execFileSync('npm', ['pack', '--json', '--ignore-scripts', '--pack-destination', temporary], { cwd: root, encoding: 'utf8' }));
-  const allowed = /^(?:package\.json|README\.md|LICENSE|THIRD_PARTY_NOTICES\.md|CHANGELOG\.md|(?:src|extensions|bin|artifact|examples|docs)\/)/;
+  const allowed = /^(?:package\.json|README\.md|LICENSE|THIRD_PARTY_NOTICES\.md|CHANGELOG\.md|(?:src|extensions|bin|research\/replay|examples|docs)\/)/;
   for (const file of pack.files) {
     assert.ok(allowed.test(file.path), `Unexpected packed file: ${file.path}`);
     assert.ok(!/(?:^|\/)(?:node_modules|evidence|qualification|\.env|\.git|__pycache__)(?:\/|$)/.test(file.path), `Private/generated material: ${file.path}`);

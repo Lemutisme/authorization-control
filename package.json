@@ -1,7 +1,16 @@
 {
   "name": "pi-authorization-control",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Tool-call authorization, Pi integration, and authorization auditing for LLM agents",
+  "author": "Lemutisme",
+  "homepage": "https://github.com/Lemutisme/authorization-control#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lemutisme/authorization-control.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lemutisme/authorization-control/issues"
+  },
   "type": "module",
   "license": "MIT",
   "engines": {
@@ -37,7 +46,8 @@
     "src/",
     "extensions/",
     "bin/",
-    "artifact/",
+    "research/replay/",
+    "!research/README.md",
     "examples/",
     "docs/",
     "README.md",
@@ -54,8 +64,9 @@
     "reproduce": ".venv/bin/python -m pipeline reproduce --all",
     "experiment": ".venv/bin/python -m pipeline run",
     "figures": ".venv/bin/python -m pipeline figures",
-    "test:research": ".venv/bin/python -m unittest discover -s test -p \"test_*.py\"",
-    "check:pipeline": ".venv/bin/python test/qualify_pipeline.py"
+    "test:research": ".venv/bin/python -m unittest discover -s pipeline/tests -t . -p \"test_*.py\"",
+    "check:pipeline": ".venv/bin/python pipeline/tests/qualify_pipeline.py",
+    "manifest": "python3 scripts/build_manifest.py"
   },
   "dependencies": {
     "ajv": "8.17.1"

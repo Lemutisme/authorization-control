@@ -22,4 +22,4 @@ The product and research pipeline are checked separately.
 
 Recorded data analysis reproduces the headline fault counts, the matched task-level contrasts, the model comparisons, the replacement-actor/approver/repair tables, and the construction and reduced-reconstruction results. All checks above use scripted responses or recorded data; they do not resample the live model campaigns.
 
-`python -m pipeline reproduce --all` performs the full recorded pipeline. `test/qualify_pipeline.py` exercises a complete new continuation using an in-process Responses fixture and a different credential/endpoint identity. Native replay compares state transitions and invokes the original permission checker; it does not infer user authorization from task utility alone.
+`python -m pipeline reproduce --all` performs the full recorded pipeline. `pipeline/tests/qualify_pipeline.py` exercises a complete new continuation using an in-process Responses fixture and a different credential/endpoint identity. Native replay compares state transitions and invokes the original permission checker; it does not infer user authorization from task utility alone.
